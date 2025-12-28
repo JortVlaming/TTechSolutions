@@ -1,0 +1,257 @@
+/* ===================================
+   Base Styles
+   =================================== */
+
+body {
+    font-family: Inter, Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: #032954;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ===================================
+   Hero Section
+   =================================== */
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section.service-hero {
+    min-height: 400px;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+}
+
+.hero-section.service-hero .hero-bg {
+    opacity: 0.3;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* ===================================
+   Services Section
+   =================================== */
+
+.services-container {
+    display: block;
+    position: relative;
+    max-width: 90rem;
+    /* Wider container for more breathing room */
+    margin: 0 auto;
+}
+
+.services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    /* Increased gap between cards */
+    margin: 0 -0.75rem;
+}
+
+.service-card {
+    flex: 0 0 100%;
+    padding: 0 0.75rem;
+    box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+    .service-card {
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .service-card {
+        flex: 0 0 calc(33.333% - 1rem);
+        /* 3 cards per row instead of 4 for more width */
+    }
+}
+
+@media (min-width: 1536px) {
+    .service-card {
+        flex: 0 0 calc(25% - 1.15rem);
+        /* 4 cards per row on very large screens */
+    }
+}
+
+.service-card-inner {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 550px;
+}
+
+.service-description {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.service-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.service-button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   Sections
+   =================================== */
+
+.section-alt-bg {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ===================================
+   Navigation
+   =================================== */
+
+.nav-bar {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+/* ===================================
+   Text Colors
+   =================================== */
+
+.text-secondary {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.text-tertiary {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.text-muted {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.text-subtle {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.text-bright {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===================================
+   Cards & Containers
+   =================================== */
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+}
+
+.card-subtle {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-medium {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card:hover,
+.card-hover:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ===================================
+   Contact Cards
+   =================================== */
+
+.contact-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+}
+
+.contact-card:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   Buttons & Links
+   =================================== */
+
+.btn-primary {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   Images
+   =================================== */
+
+.img-bordered {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===================================
+   Footer
+   =================================== */
+
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
